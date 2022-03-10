@@ -436,7 +436,7 @@ Your overall goal in the exercise below is to reproduce – in a rough way – F
 >> print("Potential energy after minimization is %s" % st.getPotentialEnergy())
 >> 
 >> # Equilibrate system with restraints on the protein
->> simulation.context.setVelocitiesToTemperature(298.15*unit.kelvin)
+>> simulation.context.setVelocitiesToTemperature(100*unit.kelvin) # start the simulation at 100 K
 >> st = simulation.context.getState(getPositions=True,getEnergy=True)
 >> print("Kinetic energy before equilibration is %s" % st.getKineticEnergy())
 >> 
