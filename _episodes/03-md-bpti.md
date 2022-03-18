@@ -389,6 +389,7 @@ Your overall goal in the exercise below is to reproduce – in a rough way – F
 >> plt.ylabel(r'$\omega$ (degrees)')
 >> plt.show()
 >> ~~~
+>> {: .language-python}
 >> 
 >> Exercise 4
 >> ~~~
@@ -511,6 +512,8 @@ Your overall goal in the exercise below is to reproduce – in a rough way – F
 >> stripped_traj.save_dcd('stripped/bpti_wat_sim_1_stripped.dcd')
 >> 
 >> ~~~
+>> {: .language-python}
+>>
 >> To continue this simulation in a new notebook
 >> ~~~
 >> from simtk.openmm import app
