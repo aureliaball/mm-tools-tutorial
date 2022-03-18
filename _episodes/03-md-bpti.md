@@ -491,7 +491,7 @@ Your overall goal in the exercise below is to reproduce – in a rough way – F
 >> #only save structure every 10 ps
 >> simulation.reporters.append(app.DCDReporter('bpti_wat_sim_1.dcd', 5000))
 >> # Print every 10 ps (you can change this frequency)
->> simulation.reporters.append(app.StateDataReporter(stdout, 5000, step=True, time=True,
+>> simulation.reporters.append(app.StateDataReporter('bpti_wat_sim_1.out', 5000, step=True, time=True,
 >>     potentialEnergy=True, temperature=True, density=True, speed=True, separator='\t'))
 >> 
 >> tinit=time.time()
@@ -538,7 +538,7 @@ Your overall goal in the exercise below is to reproduce – in a rough way – F
 >> # Run production simulation
 >> simulation.reporters.append(app.DCDReporter('bpti_wat_sim_2.dcd', 5000)) #only save structure every 10 ps
 >> # You can change how often the output is printed
->> simulation.reporters.append(app.StateDataReporter(stdout, 5000, step=True, time=True,
+>> simulation.reporters.append(app.StateDataReporter('bpti_wat_sim_2.out', 5000, step=True, time=True,
 >>     potentialEnergy=True, temperature=True, density=True, speed=True, separator='\t'))
 >> 
 >> tinit=time.time()
