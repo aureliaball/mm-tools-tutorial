@@ -82,7 +82,7 @@ For this exercise, we will be using the Amber ff14SB protein force field.
 ## MD simulation protocol
 Before you begin, make sure the pdb file, parameter/topology file, and the starting coordinate file are in the same directory as your jupyter notebook where you plan to run the simulation.
 
-Type `screen -s MD_bpti_gas` to start a terminal session named MD_bpti_gas that can continue running after you log off the computer.
+Type `screen -S MD_bpti_gas` to start a terminal session named MD_bpti_gas that can continue running after you log off the computer.
 
 Sign on to a compute node by typing `srun --partition=Legacy_Nodes --pty --nodes=1 --tasks-per-node=1 --gres=gpu:1 --time=24:00:00 --share --wait=0 --export=ALL /bin/bash`. **Write down the node you are signed on** to by looking at the prompt (it should be a number from 1 to 8).
 
