@@ -82,14 +82,10 @@ For this exercise, we will be using the Amber ff14SB protein force field.
 ## MD simulation protocol
 Before you begin, make sure the pdb file, parameter/topology file, and the starting coordinate file are in the same directory as your jupyter notebook where you plan to run the simulation.
 
-Type `screen -S MD_bpti_gas` to start a terminal session named MD_bpti_gas that can continue running after you log off the computer.
-
 Sign on to a compute node by typing `srun --partition=Legacy_Nodes --pty --nodes=1 --tasks-per-node=1 --gres=gpu:1 --time=24:00:00 --share --wait=0 --export=ALL /bin/bash`. **Write down the node you are signed on** to by looking at the prompt (it should be a number from 1 to 8).
 
 Load the latest version of python by typing `module load anaconda3/python-3.7`.
 Open a jupyter notebook by typing `jupyter notebook --no-browser`. **Write down the local host number.** 
-
-In the same window where you just opened the jupyter notebook, type `Ctrl+a` immediately followed by `d`. This detaches your jupyter notebook session from the remote terminal so that it will keep running even after you logout.
 
 In a separate terminal window on your local computer, log in to that jupyter notebook on the compute node by typing `ssh -L 8157:127.0.0.1:#### username@cnode00#.skidmore.edu` where '####' is the local host number of your jupyter notebook and where 'cnode00#' is whichever node you are running the jupyter notebook on.
 Open a browser window and navigate to `http://localhost:8157/`.
@@ -232,6 +228,24 @@ Done!
 Time required for simulation: 144.49478197097778 seconds
 ~~~
 {: .output}
+
+### Sumbitting to the queue
+
+This simulation was pretty short, but if we want to run a longer simulation (nanoseconds or microseconds) we will need to be able to submit our job and come back to it. We can do this by running our code in a python script rather than a jupyter notebook. Copy the files `simulation_template.py` and `template_gpu.scr` from `/data/chem_shared/tutorial_files/` to your current directory. You will use these files as templates for your future simulation scripts, so don't modify them. Instead, copy them to new files `BPTI_wat_new.py` and `BPTI_wat_new.scr` respectively.
+
+Copy the python code from your jupyter notebook for running the BPTI simulation to the indicated spot in the `BPTI_wat_new.py` python script.
+Edit the `BPTI_wat_new.scr` file to have the correct paths to your current directory, error file names, and py script name.
+
+Now, you are ready to submit your job. To do so, open a new terminal window and log on to pugetsound. `cd` into the directory with your BPTI scripts and type the command:
+
+`sbatch BPTI_wat_new.scr`
+
+Your job has been submitted to the queue. You can see if it is running by typing
+
+`squeue`
+
+You will see your job running on a node. When you come back later you can check again to see if it is still running. If it is not, that means it finished or there was an error. To check, open the error file that was created and look in it. Once your job has finished successfully, you can move on to analysis.
+
 
 ## Trajectory analysis
 
