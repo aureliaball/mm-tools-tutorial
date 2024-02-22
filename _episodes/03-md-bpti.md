@@ -229,6 +229,7 @@ Time required for simulation: 144.49478197097778 seconds
 ~~~
 {: .output}
 
+
 ### Sumbitting to the queue
 
 This simulation was pretty short, but if we want to run a longer simulation (nanoseconds or microseconds) we will need to be able to submit our job and come back to it. We can do this by running our code in a python script rather than a jupyter notebook. Copy the files `simulation_template.py` and `template_gpu.scr` from `/data/chem_shared/tutorial_files/` to your current directory. You will use these files as templates for your future simulation scripts, so don't modify them. Instead, copy them to new files `BPTI_wat_new.py` and `BPTI_wat_new.scr` respectively.
