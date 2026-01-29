@@ -131,7 +131,7 @@ Consider the XML file for ethane:
 ~~~
 {: .language-xml}
 
-You can also find a copy of this file, ethane.gaff2.xml, on pugetsound in /data/chem_shared/tutorial_files/
+You can also find a copy of this file, ethane.gaff2.xml, on the seattle cluster in /data/chem_shared/tutorial_files/
 
 Let's look at each section of the file.
 
