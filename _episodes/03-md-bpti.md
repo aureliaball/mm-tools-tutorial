@@ -24,7 +24,7 @@ In this lesson we will carry out an MD simulation of the protein bovine pancreat
 
 ## Starting structure and simulation preliminaries
 
-Before you start, sign on to the pugetsound cluster.
+Before you start, sign on to the seattle cluster.
 
 The X-ray crystal structures (and NMR-derived structures) of many folded proteins can be found at the [Protein Data Bank](http://www.rcsb.org). Every structure deposited in the PDB has a four character code; for this exercise we will use the structure 4PTI. This structure was deposited in 1982 (!), but has excellent resolution (1.5 Å) and provides a good starting point for our simulation.
 
@@ -237,7 +237,7 @@ This simulation was pretty short, but if we want to run a longer simulation (nan
 Copy the python code from your jupyter notebook for running the BPTI simulation to the indicated spot in the `BPTI_wat_new.py` python script.
 Edit the `BPTI_wat_new.scr` file to have the correct paths to your current directory, error file names, and py script name.
 
-Now, you are ready to submit your job. To do so, open a new terminal window and log on to pugetsound. `cd` into the directory with your BPTI scripts and type the command:
+Now, you are ready to submit your job. To do so, open a new terminal window and log on to seattle. `cd` into the directory with your BPTI scripts and type the command:
 
 `sbatch BPTI_wat_new.scr`
 
