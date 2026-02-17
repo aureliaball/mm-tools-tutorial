@@ -39,8 +39,8 @@ For this exercise, we will be using the Amber ff14SB protein force field.
 > - Download the file 4PTI.pdb from the PDB website into the directory of your choice.
 > - In a terminal window, change to that directory and type the following commands:
 >
-> ~~~
 <!-- > module load amber24/24 -->
+> ~~~
 > pdb4amber -i 4PTI.pdb -o 4PTI_withCYX.pdb --dry --nohyd
 > ~~~
 > {: .language-bash}
