@@ -100,8 +100,8 @@ We will carry out a simulation protocol very similar to that of McCammon et al. 
 First, import the required python as you did in the previous lesson.
 
 ~~~
-from simtk.openmm import app
-import simtk.openmm as mm
+from openmm import app
+import openmm as mm
 from simtk import unit
 from sys import stdout
 import time as time
@@ -232,14 +232,14 @@ Time required for simulation: 144.49478197097778 seconds
 
 ### Sumbitting to the queue
 
-This simulation was pretty short, but if we want to run a longer simulation (nanoseconds or microseconds) we will need to be able to submit our job and come back to it. We can do this by running our code in a python script rather than a jupyter notebook. Copy the files `simulation_template.py` and `template_gpu.scr` from `/data/chem_shared/tutorial_files/` to your current directory. You will use these files as templates for your future simulation scripts, so don't modify them. Instead, copy them to new files `BPTI_wat_new.py` and `BPTI_wat_new.scr` respectively.
+This simulation was pretty short, but if we want to run a longer simulation (nanoseconds or microseconds) we will need to be able to submit our job and come back to it. We can do this by running our code in a python script rather than a jupyter notebook. Copy the files `simulation_template.py` and `template_gpu.scr` from `/data/chem_shared/tutorial_files/` to your current directory. You will use these files as templates for your future simulation scripts, so don't modify them. Instead, copy them to new files `BPTI_gas_new.py` and `BPTI_gas_new.scr` respectively.
 
-Copy the python code from your jupyter notebook for running the BPTI simulation to the indicated spot in the `BPTI_wat_new.py` python script.
-Edit the `BPTI_wat_new.scr` file to have the correct paths to your current directory, error file names, and py script name.
+Copy the python code from your jupyter notebook for running the BPTI simulation to the indicated spot in the `BPTI_gas_new.py` python script.
+Edit the `BPTI_gas_new.scr` file to have the correct paths to your current directory, error file names, and py script name.
 
 Now, you are ready to submit your job. To do so, open a new terminal window and log on to seattle. `cd` into the directory with your BPTI scripts and type the command:
 
-`sbatch BPTI_wat_new.scr`
+`sbatch BPTI_gas_new.scr`
 
 Your job has been submitted to the queue. You can see if it is running by typing
 
@@ -408,8 +408,8 @@ Your overall goal in the exercise below is to reproduce – in a rough way – F
 >> 
 >> Exercise 4
 >> ~~~
->> from simtk.openmm import app
->> import simtk.openmm as mm
+>> from openmm import app
+>> import openmm as mm
 >> from simtk import unit
 >> from sys import stdout
 >> import time as time 
@@ -531,8 +531,8 @@ Your overall goal in the exercise below is to reproduce – in a rough way – F
 >>
 >> To continue this simulation in a new notebook
 >> ~~~
->> from simtk.openmm import app
->> import simtk.openmm as mm
+>> from openmm import app
+>> import openmm as mm
 >> from simtk import unit
 >> from sys import stdout
 >> import time as time 
