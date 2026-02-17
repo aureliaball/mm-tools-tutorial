@@ -35,12 +35,12 @@ Taking a structure from the PDB and getting it ready for simulation is not a tri
 For this exercise, we will be using the Amber ff14SB protein force field.
 
 > ## Getting the PDB file ready for the simulation
-> To prepare the initial parameter/topology file and the input coordinate file, you will need AmberTools18.  
+> To prepare the initial parameter/topology file and the input coordinate file, you will need AmberTools24.  
 > - Download the file 4PTI.pdb from the PDB website into the directory of your choice.
 > - In a terminal window, change to that directory and type the following commands:
 >
 > ~~~
-> module load amber18/18
+<!-- > module load amber24/24 -->
 > pdb4amber -i 4PTI.pdb -o 4PTI_withCYX.pdb --dry --nohyd
 > ~~~
 > {: .language-bash}
@@ -82,13 +82,13 @@ For this exercise, we will be using the Amber ff14SB protein force field.
 ## MD simulation protocol
 Before you begin, make sure the pdb file, parameter/topology file, and the starting coordinate file are in the same directory as your jupyter notebook where you plan to run the simulation.
 
-Sign on to a compute node by typing `srun --partition=Legacy_Nodes --pty --nodes=1 --tasks-per-node=1 --gres=gpu:1 --time=24:00:00 --share --wait=0 --export=ALL /bin/bash`. **Write down the node you are signed on** to by looking at the prompt (it should be a number from 1 to 8).
+<!-- Sign on to a compute node by typing `srun --partition=Legacy_Nodes --pty --nodes=1 --tasks-per-node=1 --gres=gpu:1 --time=24:00:00 --share --wait=0 --export=ALL /bin/bash`. **Write down the node you are signed on** to by looking at the prompt (it should be a number from 1 to 8).
 
 Load the latest version of python by typing `module load anaconda3/python-3.7`.
 Open a jupyter notebook by typing `jupyter notebook --no-browser`. **Write down the local host number.** 
 
 In a separate terminal window on your local computer, log in to that jupyter notebook on the compute node by typing `ssh -L 8157:127.0.0.1:#### username@cnode00#.skidmore.edu` where '####' is the local host number of your jupyter notebook and where 'cnode00#' is whichever node you are running the jupyter notebook on.
-Open a browser window and navigate to `http://localhost:8157/`.
+Open a browser window and navigate to `http://localhost:8157/`. -->
 Open a new jupyter notebook and name it `BPTI_gas_OpenMM`.
 
 We will carry out a simulation protocol very similar to that of McCammon et al. (as well as our earlier exercises), with ​some​ modernized aspects to it:
