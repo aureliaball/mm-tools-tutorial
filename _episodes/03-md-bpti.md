@@ -524,7 +524,8 @@ Your overall goal in the exercise below is to reproduce – in a rough way – F
 >> import mdtraj as md
 >> traj = md.load('bpti_wat_sim_1.dcd', top='bpti_wat.prmtop')
 >> stripped_traj = traj.atom_slice(traj.top.select('resSeq 0 to 57')) # change this to be one less than the number of residues in your protein
->> stripped_traj.save_dcd('stripped/bpti_wat_sim_1_stripped.dcd')
+>> imaged_stripped_traj = stripped_traj.image_molecules(anchor_molecules = stripped_traj.topology.find_molecules()) # center protein in periodic box
+>> imaged_stripped_traj.save_dcd('stripped/bpti_wat_sim_1_stripped.dcd')
 >> 
 >> ~~~
 >> {: .language-python}
@@ -571,7 +572,8 @@ Your overall goal in the exercise below is to reproduce – in a rough way – F
 >> import mdtraj as md
 >> traj = md.load('bpti_wat_sim_2.dcd', top='bpti_wat.prmtop')
 >> stripped_traj = traj.atom_slice(traj.top.select('resSeq 0 to 57')) # change this to be one less than the number of residues in your protein
->> stripped_traj.save_dcd('stripped/bpti_wat_sim_2_stripped.dcd')
+>> imaged_stripped_traj = stripped_traj.image_molecules(anchor_molecules = stripped_traj.topology.find_molecules()) # center protein in periodic box
+>> imaged_stripped_traj.save_dcd('stripped/bpti_wat_sim_2_stripped.dcd')
 >> 
 >> ~~~
 >> {: .language-python}
